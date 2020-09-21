@@ -7,7 +7,7 @@ import ctypes
 from bs4 import BeautifulSoup
 from dhooks import Webhook, Embed
 
-webhook = Webhook('')
+webhook = Webhook('https://discordapp.com/api/webhooks/757542862186479686/IoFve_ZcY4fZDITG_Lcv12wkRQ7CuqkqL4HhTb8K8nxpHYqQbg4dOByObgwg1MAWyF6f')
 send_webhook = True
 checkednumber = 0
 workingnumber = 0
@@ -53,7 +53,7 @@ def threadlol(id):
                     print(loljsonload)
                     if send_webhook is True:
                         embed = Embed(
-                        title=f"Amy Discord Invite Checker!",
+                        title=f" Discord Invite Checker!",
                         description=f"Working Invite Found!",
                         color = 0x51c240,
                         timestamp='now'
@@ -62,7 +62,7 @@ def threadlol(id):
                         embed.set_author(name='Click here to join server.', url=f"{invitee}")
                         embed.add_field(name=f"Invite:", value=f"**{invitee}**", inline=False)
                         embed.add_field(name=f"Members:", value=f"**{loljsonload[index-1]}**")
-                        embed.set_footer("Made By Amy#1000", icon_url="https://cdn.discordapp.com/attachments/537166305342652437/649648400433807361/Alther_logo_smallx2.jpg")
+                        embed.set_footer("gae", icon_url="https://cdn.discordapp.com/attachments/537166305342652437/649648400433807361/Alther_logo_smallx2.jpg")
                         webhook.send(embed=embed)
                         workingnumber += 1
                         return False, loljsonload[index-1]
